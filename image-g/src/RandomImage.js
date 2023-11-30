@@ -1,6 +1,6 @@
+// RandomImage.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import ImageDisplay from './components/ImageDisplay';
 
 const RandomImage = () => {
   const [imageUrl, setImageUrl] = useState('');
@@ -23,10 +23,20 @@ const RandomImage = () => {
     document.body.removeChild(link);
   };
 
+  const changeImage = () => {
+    generateRandomImage();
+  };
+
   return (
     <div>
       <button onClick={generateRandomImage}>壁紙を生成</button>
-      {imageUrl && <ImageDisplay imageUrl={imageUrl} downloadImage={downloadImage} />}
+      <button onClick={downloadImage}>壁紙をダウンロード</button>
+      <button onClick={changeImage}>画像を変更</button>
+      {imageUrl && (
+        <div>
+          <img src={imageUrl} alt="壁紙" style={{ maxWidth: '100%', marginTop: '20px' }} />
+        </div>
+      )}
     </div>
   );
 };
