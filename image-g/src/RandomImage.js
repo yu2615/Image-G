@@ -1,6 +1,7 @@
 // RandomImage.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import './RandomImage.css'; // 新しいCSSファイルを追加
 
 const RandomImage = () => {
   const [imageUrl, setImageUrl] = useState('');
@@ -40,7 +41,7 @@ const RandomImage = () => {
       </button>
       {imageUrl && (
         <div>
-          <img src={imageUrl} alt="壁紙" style={{ maxWidth: '100%', marginTop: '20px' }} />
+          <img src={imageUrl} alt="壁紙" className="wallpaper-image" />
         </div>
       )}
     </div>

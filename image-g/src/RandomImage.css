@@ -1,0 +1,26 @@
+/* RandomImage.css */
+.generate-button,
+.download-button,
+.change-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px; /* 角を丸くする */
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.change-button {
+  background-color: #f44336;
+}
+
+.wallpaper-image {
+  max-width: 100%;
+  margin-top: 20px;
+  border-radius: 8px; /* 画像の角を丸くする */
+}
