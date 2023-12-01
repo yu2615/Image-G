@@ -1,7 +1,7 @@
 // RandomImage.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import './RandomImage.css'; // 新しいCSSファイルを追加
+import './RandomImage.css';
 
 const RandomImage = () => {
   const [imageUrl, setImageUrl] = useState('');
@@ -25,23 +25,22 @@ const RandomImage = () => {
   };
 
   const changeImage = () => {
+    setImageUrl('');
     generateRandomImage();
   };
 
   return (
-    <div>
-      <button className="generate-button" onClick={generateRandomImage}>
-        壁紙を生成
-      </button>
-      <button className="download-button" onClick={downloadImage}>
-        壁紙をダウンロード
-      </button>
-      <button className="change-button" onClick={changeImage}>
-        画像を変更
-      </button>
+    <div className="random-image-container">
+      <div className="button-container">
+        <button className="button" onClick={generateRandomImage}>生成</button>
+        <button className="button" onClick={changeImage}>チェンジ</button>
+        {imageUrl && (
+          <button className="button" onClick={downloadImage}>ダウンロード</button>
+        )}
+      </div>
       {imageUrl && (
         <div>
-          <img src={imageUrl} alt="壁紙" className="wallpaper-image" />
+          <img className="wallpaper-image" src={imageUrl} alt="壁紙" />
         </div>
       )}
     </div>

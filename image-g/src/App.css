@@ -37,3 +37,37 @@
   margin: 4px 2px;
   cursor: pointer;
 }
+
+/* App.css */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+}
+
+.logo {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.logo img {
+  width: 50px; /* 画像のサイズに合わせて調整 */
+  margin-right: 10px;
+}
+
+.app-title {
+  font-size: 2.5em;
+  color: #333; /* 任意の色に変更してください */
+}
+
+.app-description {
+  font-size: 1.2em;
+  color: #666; /* 任意の色に変更してください */
+  margin-top: 10px;
+}
